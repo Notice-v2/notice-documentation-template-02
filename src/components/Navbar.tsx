@@ -25,7 +25,9 @@ export const Navbar = ({ meta }: Props) => {
 			as="nav"
 			align="center"
 			w="100%"
-			px={{ base: 2, lg: 4 }}
+			maxW="1118px"
+			mx="auto"
+			px="20px"
 			py={{ base: 4, lg: 8 }}
 			minH="64px"
 			bg={'transparent'}

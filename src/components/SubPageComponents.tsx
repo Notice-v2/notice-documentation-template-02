@@ -4,7 +4,6 @@ import { Box, Flex, Heading, HStack, Text, VStack } from '@chakra-ui/react'
 import dayjs from 'dayjs'
 import { useMemo } from 'react'
 import { PageContent } from './blocks/render-blocks'
-import { Navbar } from './Navbar'
 import { SocialShare } from './SocialShare'
 
 interface Props {
@@ -25,7 +24,6 @@ export const SubPageComponents = ({ data }: Props) => {
 	return (
 		<Box>
 			<Flex direction="column" justify="center" px="20px" align="flex-start" mx={'auto'} maxW="1118px">
-				<Navbar meta={data?.metadata.elements ?? []} />
 				<VStack py={{ base: '8', lg: 20 }} justify="center" align="flex-start" w="100%">
 					<Flex maxW="700px" justify="center" align="flex-start" direction="column" w="100%" h="fit-content">
 						<Heading
@@ -41,8 +39,8 @@ export const SubPageComponents = ({ data }: Props) => {
 						<Text fontSize={{ base: 'md', md: 'lg', lg: 'xl' }} color="gray.500" mb="4">
 							{data?.description}
 						</Text>
-						<HStack my="8px" justify="flex-start" align="center" gap="8px" w="100%">
-							<Text fontSize={{ base: 'sm', md: 'md', lg: 'lg' }} color="fg.muted">
+						<HStack my="8px" justify="flex-start" align="center" gap="20px" w="100%">
+							<Text flexShrink={0} fontSize={{ base: 'sm', md: 'md', lg: 'lg' }} color="fg.muted">
 								{formattedDate}
 							</Text>
 							<SocialShare />
