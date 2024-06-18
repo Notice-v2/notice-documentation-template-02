@@ -13,9 +13,10 @@ dayjs.extend(relativeTime)
 interface Props {
 	page: any
 	accentColor?: string
+	flipBg?: boolean
 }
 
-export const DocumentCard = ({ page, accentColor }: Props) => {
+export const DocumentCard = ({ page, flipBg }: Props) => {
 	const postDate = dayjs(page?.createdAt)
 	const sinceDate = postDate.fromNow()
 
@@ -31,26 +32,28 @@ export const DocumentCard = ({ page, accentColor }: Props) => {
 			_hover={{ textDecoration: 'none' }}
 		>
 			<Flex
-				bg="#E8F2FC"
+				bg={flipBg ? 'white' : '#E8F2FC'}
 				direction="column"
 				h="100%"
 				justify="center"
 				align="flex-start"
 				border={`2px solid ${isHovered ? 'black' : 'rgba(37,57,81,.2)'}`}
 			>
-				<Flex gap="12px" w="100%" h="100%" direction="column" p={{ base: '24px', md: '28px', lg: '30px' }}>
+				<Flex w="100%" h="100%" direction="column" p={{ base: '24px', md: '28px', lg: '30px' }}>
 					<Heading
 						as="h2"
-						fontSize={{ base: 'lg', md: 'xl', lg: '2xl' }}
+						fontSize={{ base: 'xl', md: 'xl', lg: '2xl' }}
 						fontWeight="600"
 						color="gray.700"
 						lineHeight="1.2"
 					>
 						{page?.title}
 					</Heading>
-					<Text noOfLines={3} fontSize={{ base: 'md', md: 'lg', lg: 'xl' }} color="gray.600">
-						{page?.description ?? ''}
-					</Text>
+					{page?.description !== '' && (
+						<Text noOfLines={3} fontSize={{ base: 'md', md: 'lg', lg: 'xl' }} color="gray.600">
+							{page?.description}
+						</Text>
+					)}
 				</Flex>
 				<HStack
 					py={{ base: '24px', md: '28px', lg: '24px' }}
