@@ -27,8 +27,8 @@ export const SubPageComponents = ({ data }: Props) => {
 	return (
 		<Box>
 			<Flex direction="column" justify="center" px="20px" align="flex-start" mx={'auto'} maxW="1118px">
-				<VStack py={{ base: '8', lg: 20 }} justify="center" align="flex-start" w="100%">
-					<Flex maxW="700px" justify="center" align="flex-start" direction="column" w="100%" h="fit-content">
+				<VStack py={{ base: '8', lg: 16 }} justify="center" align="flex-start" w="100%">
+					<Flex maxW="800px" justify="center" align="flex-start" direction="column" w="100%" h="fit-content">
 						<Heading
 							as="h1"
 							color="gray.600"

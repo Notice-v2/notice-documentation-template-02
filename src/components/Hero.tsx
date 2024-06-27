@@ -20,7 +20,7 @@ export const Hero = ({ project }: Props) => {
 			<Heading
 				as="h1"
 				color="gray.600"
-				fontSize={{ base: '2xl', md: '4xl', lg: '6xl' }}
+				fontSize={{ base: '4xl', lg: '6xl' }}
 				fontWeight="400"
 				lineHeight="1.2"
 				mb="20px"

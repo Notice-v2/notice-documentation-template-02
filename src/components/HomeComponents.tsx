@@ -12,7 +12,7 @@ export const HomeComponents = ({ data }: Props) => {
 	const hasHero = data?.project?.subtitle || data?.project?.description
 	return (
 		<Box h="fit-content" w="100%">
-			<Box mx="auto" maxW="1118px" px={{ base: '20px', md: '34px', lg: '52px' }}>
+			<Box mx="auto" maxW="1118px" px={{ base: '20px', lg: '0px' }}>
 				{hasHero && (
 					<Box pb={{ base: '20px', md: '34px', lg: '120px' }} as="section">
 						<Hero project={data?.project} />
