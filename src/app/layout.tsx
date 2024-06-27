@@ -16,7 +16,7 @@ export default async function RootLayout({
 		<html lang="en">
 			<body>
 				<Providers>
-					<Navbar meta={projectData?.metadata} />
+					<Navbar meta={projectData?.metadata ?? []} />
 					{children}
 					<CreatedWithNotice shouldHide={hideCreatedWithNotice} />
 				</Providers>
