@@ -27,7 +27,14 @@ export const HomeComponents = ({ data }: Props) => {
 				position="relative"
 				bg="#DAE9F9"
 			>
-				<Box h="auto" p="20px" maxW="1118px" mx="auto" fontSize={{ base: '16px', md: '18px' }}>
+				<Box
+					h="auto"
+					px={{ base: '20px', lg: '0px' }}
+					py="20px"
+					maxW="1118px"
+					mx="auto"
+					fontSize={{ base: '16px', md: '18px' }}
+				>
 					<Articles pages={data?.pages} accentColor={data?.project?.accentColor} />
 				</Box>
 			</Box>
