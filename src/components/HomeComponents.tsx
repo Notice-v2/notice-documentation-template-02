@@ -3,7 +3,6 @@
 import { Box } from '@chakra-ui/react'
 import { Articles } from './Articles'
 import { Hero } from './Hero'
-import { Navbar } from './Navbar'
 
 interface Props {
 	data: any
@@ -14,7 +13,6 @@ export const HomeComponents = ({ data }: Props) => {
 	return (
 		<Box h="fit-content" w="100%">
 			<Box mx="auto" maxW="1118px" px={{ base: '20px', md: '34px', lg: '52px' }}>
-				<Navbar meta={data?.metadata ?? []} />
 				{hasHero && (
 					<Box pb={{ base: '20px', md: '34px', lg: '120px' }} as="section">
 						<Hero project={data?.project} />
