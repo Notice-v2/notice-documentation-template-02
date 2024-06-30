@@ -21,7 +21,7 @@ export const HomeComponents = ({ data }: Props) => {
 			</Box>
 			<Box
 				as="section"
-				mt={{ base: hasHero ? '34px' : '40px', lg: hasHero ? '30px' : '16px' }}
+				mt={{ base: hasHero ? '34px' : '40px', lg: hasHero ? '30px' : '90px' }}
 				w="100%"
 				h="auto"
 				position="relative"

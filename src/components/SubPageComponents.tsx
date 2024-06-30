@@ -1,11 +1,10 @@
 'use client'
 
 import { Box, Flex, Heading, HStack, SimpleGrid, Text, VStack } from '@chakra-ui/react'
+import { PageContent, SocialShare } from '@notice-org/renderer-helper'
 import dayjs from 'dayjs'
 import { useMemo } from 'react'
-import { PageContent } from './blocks/render-blocks'
 import { DocumentCard } from './DocumentCard'
-import { SocialShare } from './SocialShare'
 
 interface Props {
 	data: any
