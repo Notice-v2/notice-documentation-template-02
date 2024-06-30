@@ -2,10 +2,10 @@
 
 import { Box, Flex, Heading, HStack, SimpleGrid, Text, VStack } from '@chakra-ui/react'
 import { PageContent, SocialShare } from '@notice-org/renderer-helper'
+import '@notice-org/renderer-helper/dist/style.css'
 import dayjs from 'dayjs'
 import { useMemo } from 'react'
 import { DocumentCard } from './DocumentCard'
-
 interface Props {
 	data: any
 }
